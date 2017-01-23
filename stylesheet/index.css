@@ -20,7 +20,7 @@ body{
     margin-bottom: 2em;
 }
 .my-thick-hr{
-	width: 63px;
+	width: 50%;
 	border-width: 21px;
 	border-bottom: 0;
 	border-color: #81A684;
