@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Walkthrough</title>
+
+    <!-- default bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- try themes from: https://startbootstrap.com/-->
+    <!-- <link rel="stylesheet" type="text/css" href="theme.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="theme2.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="theme3.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="theme4.css"> -->
+
+    <!-- font awesome -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- animate.css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
+    
+    <!-- use this style for testing and development purposes -->
+<!--     <style type="text/css">
+    .container{border: 2px dotted green;}
+    .row{border: 1px dotted red;}
+    .row [class*=' col-']{border: 2px dotted purple;}
+    </style>
+ -->    
+</head>
+<body>
+<!-- start of nav bar -->
+<!-- to disable sticking bar to screen, remove class navbar-fixed-top -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!-- hamburger button. do not touch. -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- home button -->
+            <a class="navbar-brand" href="#">
+                <!-- put brand logo here -->
+                <i class="fa fa-telegram"></i>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!-- this ul handles the links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">link 1</a></li>
+                <li><a href="#">link 2</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- start of container -->
+<div class="container">
+    <!-- row 1 jumbotron -->
+    <div class="row">
+        <!-- start of full screen column  -->
+        <div class="col-xs-12
+                    col-sm-12
+                    col-md-12
+                    col-lg-12">
+            <!-- start of jumbotron -->
+            <div class="jumbotron">
+                <h1>Hello, world!</h1>
+                <p>...</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            </div>
+            <!-- end of jumbotron -->
+        </div>
+        <!-- end of full-screen column -->
+    </div>
+    <!-- end of row 1 -->
+
+    <!-- row 2, three columns on all screens except xs -->
+    <div class="row">
+        <div class="col-xs-12
+                    col-sm-4
+                    col-md-4
+                    col-lg-4">
+            <div class="thumbnail">
+                <img src="http://placehold.it/800x600" alt="image 1" class="img-responsive">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>some info here</p>
+                    <a href="#" class="btn btn-primary">Benjamin</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12
+                    col-sm-4
+                    col-md-4
+                    col-lg-4">
+            <div class="thumbnail">
+                <img src="http://placehold.it/800x600" alt="image 1" class="img-responsive">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>some info here</p>
+                    <a href="#" class="btn btn-primary">Jensen</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12
+                    col-sm-4
+                    col-md-4
+                    col-lg-4">
+            <div class="thumbnail">
+                <img src="http://placehold.it/800x600" alt="image 1" class="img-responsive">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>some info here</p>
+                    <a href="#" class="btn btn-primary">Nose</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of row 2 -->
+    
+    <hr>
+    
+    <!-- start of row 3 -->
+    <div class="row">
+        <div class="col-xs-12
+                    col-sm-12
+                    col-md-12
+                    col-lg-12">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Q3xL8K74Tkw"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- end of row 3 -->
+
+    <hr>
+
+    <!-- start of row 4 -->
+    <div class="row">
+        <!-- column for form -->
+        <div class="col-xs-12
+                    col-sm-6
+                    col-md-6
+                    col-lg-6">
+            <div class="panel panel-default text-muted">
+                <div class="panel-body">
+                    <!-- form goes here! -->
+                    <div class="form-group">
+                        <form action="https://script.google.com/macros/s/AKfycbzohHjE8B182bq6HCoGKRbFqCX6pwH60CUp50HM4uFNXJmCN1PI/exec" method="post">
+                            <legend>Sign Up</legend>
+                            <div>
+                                <label for="name-id">Name</label>
+                                <input type="text" name="USERNAME" id="name-id" placeholder="Frank" class="form-control">
+                            </div>
+                            <div>
+                                <label for="email-id">Email</label>
+                                <input type="email" name="EMAIL" id="email-id" placeholder="Frank@Abignail.com" class="form-control">
+                            </div>
+                            <div class="radio">
+                                <label>
+                                       <input type="radio" name="NEWSLETTER" checked="checked" value="weekly">Send me weekly newsletters
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="NEWSLETTER" value="never">Don't send me newsletters
+                                </label>
+                            </div>
+                            <div>
+                                <input type="submit" class="btn btn-primary wow flash">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end column for form -->
+        <!-- column for text -->
+        <div class="col-xs-12
+                    col-sm-6
+                    col-md-6
+                    col-lg-6
+                    text-center">
+            <h1 class="text-primary">Lorem ipsum dolor sit amet?</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <!-- end column for text -->
+        <hr>
+    </div>
+    <!-- end of row 4 -->
+
+    <!-- start of row 5 -->
+    <div class="row">
+        <div class="col-xs-12
+                    col-sm-4
+                    col-md-4
+                    col-lg-4">
+            <table class="table">
+                <tr>
+                    <th>Day</th>
+                    <th>Hours</th>
+                </tr>
+                <tr>
+                    <td>Monday to Thursday</td>
+                    <td>9am - 5pm</td>
+                </tr>
+                <tr>
+                    <td>Friday and Saturday</td>
+                    <td>11am - 3am</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-xs-12
+                    col-sm-4
+                    col-md-4
+                    col-lg-4">
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6733089497393!2d103.92702971475397!3d1.3727022989988444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s6+Tampines+Industrial+Avenue+5%2C+Ibm+Ireland+Product+Distribution+Limited+Singapore+Branch%2C+Singapore+528760!5e0!3m2!1sen!2ssg!4v1484908579004" class="embed-responsive-item"></iframe>
+            </div>
+        </div>
+        <div class="col-xs-12
+                    col-sm-4
+                    col-md-4
+                    col-lg-4">
+            <div class="list-group">
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-phone fa-fw"></i> +65 9771 9583
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-envelope fa-fw"></i> hafiz.misron@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end of row 5 -->
+    <hr>
+    <!-- start of footer row -->
+    <div class="row">
+        <div class="col-xs-12
+                    col-sm-12
+                    col-md-12
+                    col-lg-12
+                    text-center">
+            <ul class="list-inline">
+                <li>
+                    <a href="http://instagram.com/cherenkov_blue">
+                        <i class="fa fa-instagram fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-facebook fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-twitter fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- end of footer row -->
+
+</div> 
+<!-- end of container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<!-- jquery -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/wow/1.1.2/wow.min.js"></script>
+<!-- <script src="js/wow.min.js"></script> -->
+<script>new WOW().init();</script>
+</body>
+</html>
