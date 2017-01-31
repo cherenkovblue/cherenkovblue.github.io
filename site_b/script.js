@@ -125,31 +125,41 @@ $.getJSON(url, function(data) {
 
   // output html
   $('.content').html(html);
+
+  $('.next-btn').on('click', function (e) {
+    if ($.urlParam('id') != null) {
+      window.location.href = "test.html?id=" + (Number($.urlParam('id')) + 1);
+    }
+  });
+
+  $('.prev-btn').on('click', function (e) {
+    if ($.urlParam('id') != null) {
+      window.location.href = "test.html?id=" + (Number($.urlParam('id')) - 1);
+    }
+  });
+
+  $('.random-btn').on('click', function (e) {
+    window.location.href = "test.html?id=" + (Math.floor(Math.random() * entry.length) + 1);
+  });
+
+  $('.next-page-btn').on('click', function (e) {
+    if ($.urlParam('page') != null) {
+      window.location.href = "test.html?page=" + (Number($.urlParam('page')) + 1);
+    }
+    else {
+      window.location.href = "test.html?page=2";
+    }
+  });
+
+  $('.prev-page-btn').on('click', function (e) {
+    if ($.urlParam('page') != null) {
+      window.location.href = "test.html?page=" + (Number($.urlParam('page')) - 1);
+    }
+  });
+
+  $('.home-btn').on('click', function (e) {
+    window.location.href = "test.html";
+  });
+
 });
 
-$('.next-btn').on('click', function (e) {
-  if ($.urlParam('id') != null) {
-    window.location.href = "test.html?id=" + (Number($.urlParam('id')) + 1);
-  }
-});
-
-$('.prev-btn').on('click', function (e) {
-  if ($.urlParam('id') != null) {
-    window.location.href = "test.html?id=" + (Number($.urlParam('id')) - 1);
-  }
-});
-
-$('.next-page-btn').on('click', function (e) {
-  if ($.urlParam('page') != null) {
-    window.location.href = "test.html?page=" + (Number($.urlParam('page')) + 1);
-  }
-  else {
-    window.location.href = "test.html?page=2";
-  }
-});
-
-$('.prev-page-btn').on('click', function (e) {
-  if ($.urlParam('page') != null) {
-    window.location.href = "test.html?page=" + (Number($.urlParam('page')) - 1);
-  }
-});

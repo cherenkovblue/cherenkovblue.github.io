@@ -32,6 +32,11 @@ body {
 	text-shadow: 1px 1px 1px #000000;
 }
 
+.jumbotron h1:hover {
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
 .content-box {
 	/*background-color: #6A6B83;*/
 	border-radius: 1em;
