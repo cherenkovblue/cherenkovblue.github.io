@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+
+/* use this style for testing and development purposes */
+/*
+.container{border: 2px dotted green;}
+.row{border: 1px dotted red;}
+.row [class*=' col-']{border: 2px dotted purple;}
+*/
+
+body {
+	background-color: #FFD275;
+}
+
+.container-fluid {
+	font-family: 'Sansita', sans-serif;
+	color: white;
+	height: 200%;
+}
+
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+
+.jumbotron {
+	background-color: #FFD275;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+.content-box {
+	/*background-color: #6A6B83;*/
+	border-radius: 1em;
+	padding: 0.5em 1em 0em 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	width: 95%;
+}
+
+.content-box:hover {
+	background-color: #B58DB6;
+}
+
+a {
+	color: #FFFFFF;
+}
+
+a:hover {
+	color: #FFD275;
+}
+
+.col-0 {
+	background-color: #E8AE68;
+}
+
+.col-1 {
+	background-color: #A57F60;
+}
+
+.col-2 {
+	background-color: #DB5A42;
+}
