@@ -76,3 +76,23 @@ a:hover {
 .col-2 {
 	background-color: #DB5A42;
 }
+
+.col-warning {
+	background-color: #FF4444;
+}
+
+.footer {
+	padding-bottom: 1em;
+}
+
+.btn-group .btn-group-2 {
+	visibility: hidden;
+}
+
+.fa-quote-left {
+	color: rgba(255,255,255, 0.5);
+}
+
+.fa-quote-right {
+	color: rgba(255,255,255, 0.5);
+}
