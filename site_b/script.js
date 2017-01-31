@@ -4,6 +4,8 @@
  // Make sure it is public or set to Anyone with link can view 
  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 
+ var twitterHandle = "NewTwitterHandle";
+
 // parse url parameters
 $.urlParam = function(name){
     var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
@@ -24,12 +26,6 @@ $.getJSON(url, function(data) {
   
   // loop to build html output for each row
   var entry = data.feed.entry;
-  /**
-  ** descending order:
-  ** for (var i = entry.length - 1; i >= 0; i -= 1) {
-  ** ascending order:
-  ** for (var i = 0; i < entry.length; i++) {
-   */
 
   if ($.urlParam('id') != null) {
     // indented just to allow for clarity
@@ -42,14 +38,23 @@ $.getJSON(url, function(data) {
     html += '      <h2>' + entry[$.urlParam('id') - 1]['gsx$entry']['$t'] + '</h2>';
     html += '      <p>&nbsp</p>';
     html += '    </div>';
-    html += '    <div class="content-footer">';
-    html += '      <a href="https://twitter.com/intent/tweet?text='+entry[$.urlParam('id') - 1]['gsx$entry']['$t']+'&via=ThingsKidsSay"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;';
+    html += '    <div class="content-bottom">';
+    html += '      <h3>-' + entry[$.urlParam('id') - 1]['gsx$source']['$t'] + '</h3>';
+    html += '    </div>';
+    html += '    <div class="content-footer text-center">';
+    html += '      <a href="https://twitter.com/intent/tweet?text='+entry[$.urlParam('id') - 1]['gsx$entry']['$t']+'&via='+twitterHandle+'"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;';
     html += '      <p>&nbsp</p>';
     html += '    </div>';
     html += '  </div>';
     html += '</div>';
   }
   else {
+    /**
+    ** descending order:
+    ** for (var i = entry.length - 1; i >= 0; i -= 1) {
+    ** ascending order:
+    ** for (var i = 0; i < entry.length; i++) {
+    */
     for (var i = entry.length - 1; i >= 0; i -= 1) {
       // indented just to allow for clarity
       var j = i % 3;
@@ -63,8 +68,11 @@ $.getJSON(url, function(data) {
       html += '      <h2>' + entry[i]['gsx$entry']['$t'] + '</h2>';
       html += '      <p>&nbsp</p>';
       html += '    </div>';
+      html += '    <div class="content-bottom">';
+      html += '      <h3>-' + entry[i]['gsx$source']['$t'] + '</h3>';
+      html += '    </div>';
       html += '    <div class="content-footer text-center">';
-      html += '      <a href="https://twitter.com/intent/tweet?text='+entry[i]['gsx$entry']['$t']+'&via=TwitterHandle"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;';
+      html += '      <a href="https://twitter.com/intent/tweet?text='+entry[i]['gsx$entry']['$t']+'&via='+twitterHandle+'"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;';
       html += '      <p>&nbsp</p>';
       html += '    </div>';
       html += '  </div>';

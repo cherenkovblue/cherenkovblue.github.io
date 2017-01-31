@@ -9,7 +9,10 @@
 */
 
 body {
-	background-color: #FFD275;
+	/*background-color: #FFD275;*/
+	background-image: url('stripe3.png');
+	background-repeat: auto;
+	padding-top: 1em;
 }
 
 .container-fluid {
@@ -24,7 +27,8 @@ body {
 }
 
 .jumbotron {
-	background-color: #FFD275;
+	background-color: rgba(255,255,255,0.5);
+	color: #DB5A42;
 	text-shadow: 1px 1px 1px #000000;
 }
 
@@ -38,7 +42,8 @@ body {
 }
 
 .content-box:hover {
-	background-color: #B58DB6;
+	background-color: black;
+	color: white;
 }
 
 
